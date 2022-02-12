@@ -1,0 +1,16 @@
+.btn-duo {
+    @include radius(4);
+    text-align: center;
+    @include setBgColor($blue, $white);
+    @include font-face($natoSans, style('normal'), size(16), weight('medium'), line-height(16, 16));
+    padding: length(12) length(24);
+
+    @include breakpoint(phone500) {
+        @include font-face($natoSans, style('normal'), size(14), weight('medium'), line-height(14, 14));
+        padding: length(12) length(18);
+    }
+
+    @include hover {
+        @include setBgColor($blue-hover, $white);
+    }
+}

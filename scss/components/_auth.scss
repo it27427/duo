@@ -1,0 +1,328 @@
+.authentication {
+    background: $white;
+    @include w100;
+    height: 100vh;
+    @include flex-center;
+
+    &-info {
+        background: $white;
+        @include w100;
+        max-width: length(450);
+        @include border(solid, 1, $border-1);
+        padding: length(48) length(40) length(36);
+        min-height: length(400);
+        @include flex-column;
+        gap: length(24);
+
+        @include breakpoint(phone575) {
+            padding: length(32) length(20);
+            margin: 0 length(16);
+        }
+    }
+
+    &-header {
+        @include flex-center-column;
+        gap: length(16);
+
+        .logo {
+            width: length(75);
+            height: length(24);
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+                max-width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &-info {
+            @include flex-center-column;
+            gap: length(8);
+            text-align: center;
+
+            .authentication-title {
+                @include font-face($natoSans, style('normal'), size(24), weight('normal'), line-height(31.992, 24));
+                color: $primary;
+            }
+
+            .authentication-text {
+                @include font-face($natoSans, style('normal'), size(16), weight('normal'), line-height(24, 16));
+                color: $primary;
+                letter-spacing: length(0.1);
+            }
+
+            .verifytextbox {
+                .verifytext {
+                    @include font-face($natoSans, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                    color: $primary;
+                }
+            }
+
+            .btn-user {
+                @include flex-center-vert;
+                gap: length(8);
+                @include setBgColor($white, $textButton);
+                @include border(solid, 1, $border-1);
+                padding: length(4) length(8);
+                @include radius(16);
+                opacity: 1;
+                margin-top: length(4);
+
+                @include hover {
+                    @include setBgColor($btnHover, $primary);
+                }
+
+                .icon {
+                    @include square(length(20));
+                    @include flex-center;
+                    @include circle;
+                    overflow: hidden;
+
+                    img {
+                        @include wh100;
+                        object-fit: contain;
+                    }
+                }
+
+                .text {
+                    @include font-face($natoSans, style('normal'), size(13), weight('normal'), line-height(13, 13));
+                    letter-spacing: length(0.25);
+                }
+            }
+        }
+    }
+
+    &-form {
+        .verifyinfo {
+            margin-bottom: length(16);
+
+            .verifytext {
+                @include font-face($natoSans, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                color: $gray-700;
+            }
+        }
+        .wrapper {
+            .input-wrapper {
+                position: relative;
+                width: 100%;
+                height: 3rem;
+                padding-top: .5rem;
+    
+                .input-field {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    @include w100;
+                    @include setBgColor($white, $primary);
+                    @include border(solid, 1, border-1);
+                    @include radius(4);
+                    @include font-face($natoSans, style('normal'), size(16), weight('normal'), line-height(24, 16));
+                    padding: length(13) length(15);
+                    outline: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    -ms-appearance: none;
+                    appearance: none;
+                    transition: .25s ease;
+    
+                    &:focus {
+                        border-color: royalblue;
+                    }
+    
+                    &::placeholder {
+                        color: $placeholderText;
+                    }
+                }
+    
+                .input-label {
+                    position: absolute;
+                    left: 1rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: text;
+                    color: $placeholderText;
+                    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+                    background: $white;
+                    margin-bottom: 0;
+                    line-height: 1.5;
+                }
+    
+                .input-field:focus ~ .input-label,
+                .input-field:not(:placeholder-shown).input-field:not(:focus) ~ .input-label {
+                    top: 0;
+                    @include font-face($natoSans, style('normal'), size(12), weight('normal'), line-height(20, 12));
+                    color: $blue;
+                    padding: 0 .375rem;
+                    font-weight: 600;
+                    letter-spacing: .03125rem;
+                }
+    
+                .input-field:focus ~ .input-label {
+                    color: $blue;
+                }
+    
+                textarea {
+                    resize: none;
+                }
+            }
+    
+            .error-message {
+                margin-top: length(10);
+                display: none;
+                
+                .message {
+                    @include font-face($natoSans, style('normal'), size(12), weight('normal'), line-height(16, 12));
+                    color: $red-text;
+                }
+
+                .icon {
+                    svg {
+                        path {
+                            fill: $red;
+                        }
+                    }
+                }
+            }
+    
+            &.error {
+                .input-wrapper {
+                    .input-field {
+                        border-color: $red;
+                    }
+    
+                    .input-field:not(:placeholder-shown).input-field:not(:focus) ~ .input-label {
+                        color: $red;
+                    }
+    
+                    .input-field:focus ~ .input-label {
+                        color: $red-text;
+                    }
+    
+                    .input-label {
+                        color: $red-text;
+                    }
+                }
+    
+                .error-message {
+                    @include  flex-center-vert;
+                    gap: length(4);
+                }
+            }
+        }
+    
+        .form-box {
+            position: relative;
+    
+            &-label {
+                position: absolute;
+                top: -0.625rem;
+                left: 0;
+                font-size: 1rem;
+                padding: .3125rem 0;
+                margin: .625rem 0;
+                pointer-events: none;
+                transition: .5s;
+            }
+    
+            .form-control:focus ~ .form-box-label,
+            .form-control:not(:placeholder-shown).input-field:not(:focus) ~ .input-label {
+                transform: translateY(-1.25rem);
+                color: $blue;
+                font-weight: 800;
+            }
+    
+            .form-control:focus {
+                border-color: $blue;
+            }
+        }
+
+        .togglepassword {
+            @include flex-center-vert;
+            @include w100;
+            padding-top: length(20);
+            @include font-face($natoSans, style('normal'), size(14), weight('normal'), line-height(20, 14));
+
+            input[type="checkbox"] {
+                width: auto;
+
+                &:checked ~ {
+                    .togglepass {
+                        &::before {
+                            background: $blue;
+                            border-color: $blue;
+                        }
+
+                        &::after {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+
+            .togglepass {
+                @include w100;
+                position: relative;
+                padding-left: length(30);
+                cursor: pointer;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    background: $white;
+                    @include transform(translateY(-50%));
+                    @include square(length(18));
+                    @include border(solid, 1, $placeholderText);
+                    @include transitions;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 43%;
+                    left: length(7);
+                    width: length(5);
+                    height: length(10);
+                    @include border(solid, 1, $white);
+                    @include transform(translateY(-50%) rotate(45deg));
+                    border-top: 0;
+                    border-left: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    @include transitions;
+                }
+
+                &::selection {
+                    @include setBgColor(transparent, $primary);
+                }
+            }
+        }
+    
+        .submitbox {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-top: length(26);
+            
+            .send-btn {
+                border: none;
+                outline: none;
+                padding: length(12) length(24);
+                @include setBgColor($blue, $white);
+                @include font-face($natoSans, style('normal'), size(14), weight('medium'), line-height(14, 14));
+                letter-spacing: length(0.17);
+                @include radius(4);
+                text-align: center;
+                transition: .5s ease-in-out;
+    
+                &:hover {
+                    background: darken($blue, 10%);
+                    box-shadow: $boxshadow-1;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.header {
+    background: $white;
+    height: length(64);
+    @include flex-center-between;
+    padding: length(20);
+
+    .logo {
+        width: length(167);
+        height: length(48);
+        @include flex-center;
+        overflow: hidden;
+        @include transitions;
+
+        @include breakpoint(phone500) {
+            width: length(130);
+        }
+
+        img {
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        @include hover {
+            opacity: 0.75;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+/**==================================================
+                GOOGLE FONT CDN
+==================================================**/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+/**==================================================
+                FONTS INFO START
+==================================================**/
+$natoSans: 'Noto Sans';
+$font-styles: ('normal': normal, 'italic': italic, 'oblique': oblique);
+$font-weights: ('thin':100, 'light': 300, 'normal': normal, 'medium': 500, 'semibold': 600, 'bold': 700, 'black': 900);
+
+/**===============================================
+                LORENZA FONTS PATH
+===============================================**/
+
+$lorenza-thin-path: '../fonts/Lorenza/Lorenza-Thin';
+$lorenza-normal-path: '../fonts/Lorenza/Lorenza';
+$lorenza-medium-path: '../fonts/Lorenza/Lorenza-Medium';
+
+$path-1: url('../fonts/Lorenza/Lorenza.woff2') format('woff2'),
+url('../fonts/Lorenza/Lorenza.woff') format('woff');
+
+// SET FONT-FAMILY
+@function family($font-family) {
+	@return inspect($value: $font-family);
+}
+
+// SET FONT-STYLE
+@function style($style) {
+	@return map-get($font-styles, $style);
+}
+
+// SET FONT-STYLE
+@function size($size) {
+	@return (($size / $base) + rem);
+}
+
+// SET FONT-WEIGHT
+@function weight($weight) {
+	@return map-get($font-weights, $weight);
+}
+
+// SET LINE-HEIGHT
+@function line-height($line-height, $size) {
+	@return ($line-height / $size);
+}
+
+/**===============================================
+                FONT STYLE MIXINS
+===============================================**/
+
+// FONT WITHOUT PATH
+@mixin font-face($fontname, $fontstyle, $fontsize, $fontweight, $line-height) {
+	font: {
+		family: quote($fontname);
+		style: $fontstyle;
+		size: $fontsize;
+		weight: $fontweight;
+	}
+
+	line-height: $line-height;
+}
+
+/**======================================
+            HEADING STYLES
+=======================================**/
+
+.text {
+	@include font-face($natoSans, style('normal'), size(14), weight('normal'), line-height(18.6662, 14));
+}

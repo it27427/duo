@@ -1,0 +1,51 @@
+.hero {
+    background: $heroBg;
+    padding: length(128) 0;
+    
+    @include breakpoint(tablet991) {
+        padding: length(64) 0;
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(20);
+
+        .herotitle {
+            @include font-face($natoSans, style('normal'), size(44), weight('medium'), line-height(52, 44));
+            color: $primary;
+            text-align: left;
+            
+            @include breakpoint(tablet991) {
+                @include font-face($natoSans, style('normal'), size(36), weight('medium'), line-height(44, 36));
+                text-align: center;
+            }
+        }
+
+        .herotext {
+            @include font-face($natoSans, style('normal'), size(16), weight('medium'), line-height(24, 16));
+            color: $primary;
+            margin-bottom: length(10);
+            text-align: left;
+
+            @include breakpoint(tablet991) {
+                text-align: center;
+            }
+        }
+
+        .info {
+            @include breakpoint(tablet991) {
+                @include flex-center;
+            }
+        }
+    }
+
+    &-thumbnail {
+        @include flex-center;
+        overflow: hidden;
+
+        img {
+            max-width: 100%;
+            object-fit: contain;
+        }
+    }
+}
