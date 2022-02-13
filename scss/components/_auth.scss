@@ -4,10 +4,42 @@
     height: 100vh;
     @include flex-center;
 
+    .authenticationbox {
+        max-width: length(450);
+        @include w100;
+        @include flex-column;
+        gap: length(24);
+
+        .authdetails {
+            @include flex-center-between;
+
+            @include breakpoint(phone575) {
+                padding: length(0) length(20);
+            }
+
+            .languageselect {
+                select {
+                    background: transparent;
+                    color: $primary;
+                    @include font-face($natoSans, style('normal'), size(12), weight('light'), line-height(16, 12));
+                }
+            }
+
+            .authmenu {
+                @include flex-center-vert;
+                gap: length(16);
+
+                .authlink {
+                    color: $authText;
+                    @include font-face($natoSans, style('normal'), size(12), weight('light'), line-height(16, 12));
+                }
+            }
+        }
+    }
+
     &-info {
         background: $white;
         @include w100;
-        max-width: length(450);
         @include border(solid, 1, $border-1);
         padding: length(48) length(40) length(36);
         min-height: length(400);
@@ -16,7 +48,8 @@
 
         @include breakpoint(phone575) {
             padding: length(32) length(20);
-            margin: 0 length(16);
+            margin: 0 auto;
+            max-width: 90%;
         }
     }
 

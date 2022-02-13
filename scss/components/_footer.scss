@@ -1,0 +1,112 @@
+.footer {
+    padding: length(40) length(32) length(20);
+    margin-top: length(60);
+    background: $footerBg;
+
+    @include breakpoint(tablet991) {
+        margin-top: length(32);
+    }
+
+    .footerdetails {
+        @include flex-column;
+        gap: length(20);
+
+        &-header {
+            @include flex-center-vert;
+            gap: length(55);
+
+            @include breakpoint(tablet991) {
+                flex-wrap: wrap;
+                gap: length(20);
+            }
+
+            .icon {
+                width: length(80);
+                height: length(40);
+                @include flex-center;
+                overflow: hidden;
+
+                img {
+                    @include wh100;
+                    object-fit: contain;
+                }
+            }
+
+            .footermenu {
+                @include flex-center-vert;
+                gap: length(30);
+
+                @include breakpoint(phone768) {
+                    flex-wrap: wrap;
+                    gap: length(10);
+                }
+
+                .footerlink {
+                    color: $placeholderText;
+                    @include font-face($natoSans, style('normal'), size(14), weight('light'), line-height(22, 14));
+                    letter-spacing: length(.25);
+                    display: inline-block;
+                    text-decoration: none;
+
+                    @include hover {
+                        opacity: 0.75;
+                    }
+                }
+            }
+        }
+
+        &-body {
+            .footertext {
+                @include font-face($natoSans, style('normal'), size(12), weight('light'), line-height(24, 12));
+                
+                sup {
+                    margin-top: length(-16);
+                    font-size: 60%;
+                    margin-right: length(2);
+                }
+            }
+        }
+    }
+
+    .footerinfo {
+        @include flex-center;
+        gap: length(20);
+
+        .footlink {
+            @include flex-center-vert;
+            gap: length(8);
+            text-decoration: none;
+
+            .icon {
+                @include square(length(20));
+                @include flex-center;
+                overflow: hidden;
+            }
+
+            svg {
+                path {
+                    fill: $placeholderText;
+                }
+            }
+
+            @include hover {
+                opacity: 0.75;
+            }
+
+            .text {
+                color: $placeholderText;
+                @include font-face($natoSans, style('normal'), size(14), weight('light'), line-height(22, 14));
+                letter-spacing: length(.25);
+            }
+        }
+        
+        .languageselect {
+            select {
+                background: transparent;
+                color: $placeholderText;
+                @include font-face($natoSans, style('normal'), size(14), weight('light'), line-height(22, 14));
+                letter-spacing: length(.25);
+            }
+        }
+    }
+}

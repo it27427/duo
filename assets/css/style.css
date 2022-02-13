@@ -783,6 +783,185 @@ select {
   opacity: 0.75;
 }
 
+.footer {
+  padding: 2.5rem 2rem 1.25rem;
+  margin-top: 3.75rem;
+  background: #f8f9fa;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .footer {
+    margin-top: 2rem;
+  }
+}
+
+.footer .footerdetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+.footer .footerdetails-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3.4375rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .footer .footerdetails-header {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+}
+
+.footer .footerdetails-header .icon {
+  width: 5rem;
+  height: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.footer .footerdetails-header .icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.footer .footerdetails-header .footermenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.875rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .footer .footerdetails-header .footermenu {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 0.625rem;
+  }
+}
+
+.footer .footerdetails-header .footermenu .footerlink {
+  color: #5f6368;
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.57143;
+  letter-spacing: 0.01562rem;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.footer .footerdetails-header .footermenu .footerlink:not([disabled]):hover {
+  opacity: 0.75;
+}
+
+.footer .footerdetails-body .footertext {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 2;
+}
+
+.footer .footerdetails-body .footertext sup {
+  margin-top: -1rem;
+  font-size: 60%;
+  margin-right: 0.125rem;
+}
+
+.footer .footerinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.25rem;
+}
+
+.footer .footerinfo .footlink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.footer .footerinfo .footlink .icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.footer .footerinfo .footlink svg path {
+  fill: #5f6368;
+}
+
+.footer .footerinfo .footlink:not([disabled]):hover {
+  opacity: 0.75;
+}
+
+.footer .footerinfo .footlink .text {
+  color: #5f6368;
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.57143;
+  letter-spacing: 0.01562rem;
+}
+
+.footer .footerinfo .languageselect select {
+  background: transparent;
+  color: #5f6368;
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.57143;
+  letter-spacing: 0.01562rem;
+}
+
 .btn-duo {
   border-radius: 0.25rem;
   border-radius: 0.25rem;
@@ -1038,10 +1217,70 @@ button:hover {
           justify-content: center;
 }
 
+.authentication .authenticationbox {
+  max-width: 28.125rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.authentication .authenticationbox .authdetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .authentication .authenticationbox .authdetails {
+    padding: 0rem 1.25rem;
+  }
+}
+
+.authentication .authenticationbox .authdetails .languageselect select {
+  background: transparent;
+  color: #202124;
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1.33333;
+}
+
+.authentication .authenticationbox .authdetails .authmenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.authentication .authenticationbox .authdetails .authmenu .authlink {
+  color: #757575;
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1.33333;
+}
+
 .authentication-info {
   background: white;
   width: 100%;
-  max-width: 28.125rem;
   border: solid 0.0625rem #dadce0;
   padding: 3rem 2.5rem 2.25rem;
   min-height: 25rem;
@@ -1058,7 +1297,8 @@ button:hover {
 @media screen and (max-width: 35.9375rem) {
   .authentication-info {
     padding: 2rem 1.25rem;
-    margin: 0 1rem;
+    margin: 0 auto;
+    max-width: 90%;
   }
 }
 
@@ -1607,6 +1847,513 @@ button:hover {
 }
 
 .hero-thumbnail img {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.featured {
+  padding: 4.375rem 0rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .featured {
+    padding: 4.375rem 1rem;
+  }
+}
+
+.featured-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.featured-header .featured-title {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-size: 2.75rem;
+  font-weight: 300;
+  line-height: 1.18182;
+  color: #202124;
+  text-align: center;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .featured-header .featured-title {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.25;
+  }
+}
+
+.featured-body .feature {
+  padding: 1.25rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .featured-body .feature {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    gap: 0.625rem;
+  }
+}
+
+.featured-body .feature-icon {
+  width: 2rem;
+}
+
+.featured-body .feature-icon .icon {
+  height: 2rem;
+  width: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  margin-top: 0.3125rem;
+}
+
+.featured-body .feature-icon .icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.featured-body .feature-details {
+  width: calc(100% - 4rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.625rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .featured-body .feature-details {
+    width: 100%;
+  }
+}
+
+.featured-body .feature-details .feature-title {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-size: 1.375rem;
+  font-weight: normal;
+  line-height: 1.36364;
+  color: #202124;
+}
+
+@media screen and (max-width: 48rem) {
+  .featured-body .feature-details .feature-title {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.44444;
+  }
+}
+
+.featured-body .feature-details .feature-text {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #202124;
+}
+
+@media screen and (max-width: 48rem) {
+  .featured-body .feature-details .feature-text {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.71429;
+    letter-spacing: 0.01562rem;
+  }
+}
+
+.main {
+  padding-bottom: 7.5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .main {
+    padding-bottom: 4rem;
+  }
+}
+
+.main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 7.5rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .main-content {
+    gap: 2rem;
+  }
+}
+
+.main-content .content-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .main-content .content-details {
+    margin-bottom: 0.625rem;
+  }
+}
+
+.main-content .content-details .main-title {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-size: 2.75rem;
+  font-weight: 300;
+  line-height: 1.18182;
+  color: #202124;
+  text-align: left;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .main-content .content-details .main-title {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.25;
+    text-align: center;
+  }
+}
+
+.main-content .content-details .desktop-title {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-size: 2.75rem;
+  font-weight: 300;
+  line-height: 1.18182;
+  color: #202124;
+  text-align: left;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .main-content .content-details .desktop-title {
+    display: none;
+  }
+}
+
+.main-content .content-details .desktop-text {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #202124;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .main-content .content-details .desktop-text {
+    display: none;
+  }
+}
+
+.main-content .main-thumbnail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.main-content .main-thumbnail .mobile-title {
+  display: none;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .main-content .main-thumbnail .mobile-title {
+    display: block;
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-size: 1.375rem;
+    font-weight: 300;
+    line-height: 1.36364;
+    text-align: center;
+  }
+}
+
+.main-content .main-thumbnail .main-thumb {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-content .main-thumbnail .main-thumb img {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.main-content .main-thumbnail .video-thumb {
+  width: 11.5rem;
+  height: 23.4375rem;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0.625rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+
+.main-content .main-thumbnail .video-thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+
+.main-content .main-thumbnail .video-thumb .video {
+  position: absolute;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  overflow: hidden;
+  max-width: 95%;
+  width: 100%;
+  height: 100%;
+  padding: 0.625rem;
+  margin: 0 auto;
+  border-radius: 0.625rem;
+  border-radius: 0.625rem;
+}
+
+.main-content .main-thumbnail .video-thumb .imgbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0.625rem;
+}
+
+.main-content .main-thumbnail .video-thumb .imgbox img {
+  width: 100%;
+  height: 100%;
+}
+
+.main-content .main-thumbnail .mobile-text {
+  display: none;
+  margin-top: 0.875rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .main-content .main-thumbnail .mobile-text {
+    display: block;
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.625;
+    color: #202124;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .main-content .main-thumbnail .mobile-text {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.71429;
+    letter-spacing: 0.01562rem;
+  }
+}
+
+.downloadapps {
+  padding-bottom: 5.75rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .downloadapps {
+    padding: 2rem 1.25rem;
+  }
+}
+
+.downloadapps-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.downloadapps-content .logo {
+  height: 5rem;
+  width: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.downloadapps-content .logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.downloadapps-content .title {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-size: 2.75rem;
+  font-weight: 300;
+  line-height: 1.18182;
+  color: #202124;
+  text-align: center;
+  margin: 0.75rem 0rem 1rem;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .downloadapps-content .title {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.25;
+  }
+}
+
+.downloadapps-content .text {
+  margin-bottom: 1.75rem;
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+  color: #3c4043;
+}
+
+@media screen and (max-width: 61.9375rem) {
+  .downloadapps-content .text {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.71429;
+    letter-spacing: 0.01562rem;
+    text-align: center;
+  }
+}
+
+.downloadapps-content .applinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+}
+
+.downloadapps-content .applinks .link {
+  width: 10.9375rem;
+  height: 3.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .downloadapps-content .applinks .link {
+    width: 50%;
+  }
+}
+
+.downloadapps-content .applinks .link img {
   max-width: 100%;
   -o-object-fit: contain;
      object-fit: contain;

@@ -49,3 +49,297 @@
         }
     }
 }
+
+.featured {
+    padding: length(70) length(0);
+
+    @include breakpoint(phone768) {
+        padding: length(70) length(16);
+    }
+    
+    &-content {
+        @include flex-center-column;
+        gap: length(40);
+    }
+
+    &-header {
+        .featured-title {
+            @include font-face($natoSans, style('normal'), size(44), weight('light'), line-height(52, 44));
+            color: $primary;
+            text-align: center;
+            
+            @include breakpoint(tablet991) {
+                @include font-face($natoSans, style('normal'), size(32), weight('light'), line-height(40, 32));
+            }
+        }
+    }
+    
+    &-body {
+        .feature {
+            padding: length(20) length(0);
+            display: flex;
+            gap: length(32);
+
+            @include breakpoint(phone768) {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: length(10);
+            }
+            
+            &-icon {
+                width: length(32);
+
+                .icon {
+                    @include square(length(32));
+                    @include flex-center;
+                    overflow: hidden;
+                    margin-top: length(5);
+
+                    img {
+                        @include  wh100;
+                        object-fit: contain;
+                    }
+                }
+            }
+            
+            &-details {
+                width: calc(100% - 4rem);
+                @include flex-column;
+                gap: length(10);
+
+                @include breakpoint(phone768) {
+                    @include w100;
+                }
+
+                .feature-title {
+                    @include font-face($natoSans, style('normal'), size(22), weight('normal'), line-height(30, 22));
+                    color: $primary;
+                    
+                    @include breakpoint(phone768) {
+                        @include font-face($natoSans, style('normal'), size(18), weight('normal'), line-height(26, 18));
+                    }
+                }
+                
+                .feature-text {
+                    @include font-face($natoSans, style('normal'), size(16), weight('normal'), line-height(26, 16));
+                    color: $primary;
+
+                    @include breakpoint(phone768) {
+                        @include font-face($natoSans, style('normal'), size(14), weight('light'), line-height(24, 14));
+                        letter-spacing: length(.25);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main {
+    padding-bottom: length(120);
+
+    @include breakpoint(tablet991) {
+        padding-bottom: length(64);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(120);
+
+        @include breakpoint(tablet991) {
+            gap: length(32);
+        }
+
+        .content-details {
+            @include flex-column;
+            gap: length(16);
+
+            @include breakpoint(tablet991) {
+                margin-bottom: length(10);
+            }
+
+            .main-title {
+                @include font-face($natoSans, style('normal'), size(44), weight('light'), line-height(52, 44));
+                color: $primary;
+                text-align: left;
+
+                @include breakpoint(tablet991) {
+                    @include font-face($natoSans, style('normal'), size(32), weight('light'), line-height(40, 32));
+                    text-align: center;
+                }
+            }
+
+            .desktop-title {
+                @include font-face($natoSans, style('normal'), size(44), weight('light'), line-height(52, 44));
+                color: $primary;
+                text-align: left;
+
+                @include breakpoint(tablet991) {
+                    display: none;
+                }
+            }
+
+            .desktop-text {
+                @include font-face($natoSans, style('normal'), size(16), weight('normal'), line-height(26, 16));
+                color: $primary;
+
+                @include breakpoint(tablet991) {
+                    display: none;
+                }
+            }
+        }
+
+        .main-thumbnail {
+            @include flex-column;
+            gap: length(16);
+
+            .mobile-title {
+                display: none;
+                margin-bottom: length(32);
+
+                @include breakpoint(tablet991) {
+                    display: block;
+                    @include font-face($natoSans, style('normal'), size(22), weight('light'), line-height(30, 22));
+                    text-align: center;
+                }
+            }
+
+            .main-thumb {
+                @include wh100;
+                overflow: hidden;
+
+                img {
+                    max-width: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .video-thumb {
+                width: length(184);
+                height: length(375);
+                max-width: 100%;
+                margin: 0 auto;
+                position: relative;
+                @include flex-center;
+                @include radius(10);
+                overflow: hidden;
+
+                img {
+                    @include wh100;
+                    object-fit: cover;
+                    position: relative;
+                }
+
+                .video {
+                    position: absolute;
+                    top: auto;
+                    left: auto;
+                    right: auto;
+                    bottom: auto;
+                    overflow: hidden;
+                    max-width: 95%;
+                    @include wh100;
+                    padding: length(10);
+                    margin: 0 auto;
+                    @include radius(10);
+                }
+
+                .imgbox {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    @include wh100;
+                    padding: length(16) length(10);
+
+                    img {
+                        @include wh100;
+                    }
+                }
+            }
+
+            .mobile-text {
+                display: none;
+                margin-top: length(14);
+
+                @include breakpoint(tablet991) {
+                    display: block;
+                    @include font-face($natoSans, style('normal'), size(16), weight('normal'), line-height(26, 16));
+                    color: $primary;
+                    text-align: center;
+                }
+
+                @include breakpoint(phone768) {
+                    @include font-face($natoSans, style('normal'), size(14), weight('light'), line-height(24, 14));
+                    letter-spacing: length(.25);
+                }
+            }
+        }
+    }
+}
+
+.downloadapps {
+    padding-bottom: length(92);
+
+    @include breakpoint(tablet991) {
+        padding: length(32) length(20);
+    }
+
+    &-content {
+        @include flex-center-column;
+
+        .logo {
+            @include square(length(80));
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: contain;
+            }
+        }
+
+        .title {
+            @include font-face($natoSans, style('normal'), size(44), weight('light'), line-height(52, 44));
+            color: $primary;
+            text-align: center;
+            margin: length(12) length(0) length(16);
+
+            @include breakpoint(tablet991) {
+                @include font-face($natoSans, style('normal'), size(32), weight('light'), line-height(40, 32));
+            }
+        }
+
+        .text {
+            margin-bottom: length(28);
+            @include font-face($natoSans, style('normal'), size(16), weight('normal'), line-height(26, 16));
+            color: $textButton;
+
+            @include breakpoint(tablet991) {
+                @include font-face($natoSans, style('normal'), size(14), weight('light'), line-height(24, 14));
+                letter-spacing: length(.25);
+                text-align: center;
+            }
+        }
+
+        .applinks {
+            @include flex-center;
+            gap: length(32);
+
+            .link {
+                width: length(175);
+                height: length(50);
+                @include flex-center;
+                overflow: hidden;
+
+                @include breakpoint(phone575) {
+                    width: 50%;
+                }
+
+                img {
+                    max-width: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}
