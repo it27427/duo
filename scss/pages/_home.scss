@@ -252,7 +252,8 @@
                     padding: length(16) length(10);
 
                     img {
-                        @include wh100;
+                        max-width: 100%;
+                        object-fit: contain;
                     }
                 }
             }
