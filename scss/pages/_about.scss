@@ -1,0 +1,74 @@
+.homehero {
+    margin: length(64) length(0) length(40);
+    background: $white;
+    position: relative;
+    height: calc(100vh - 4rem);
+    @include flex-center;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        background: url(../images/home-banner.svg);
+        background-size: contain;
+        top: 0;
+        left: 0;
+        margin: 1rem;
+        position: absolute;
+        @include w100;
+        height: 50%;
+        z-index: 100;
+    }
+
+    &-content {
+        background: $white;
+        position: absolute;
+        top: 25%;
+        z-index: 110;
+        padding: length(80);
+        @include flex-center-column;
+        gap: length(20);
+        text-align: center;
+        overflow: hidden;
+
+        @include breakpoint(phone768) {
+            padding: length(24);
+        }
+
+        @include breakpoint(phone480) {
+            padding: length(16);
+        }
+
+        .herotitle {
+            @include font-face($natoSans, style('normal'), size(44), weight('medium'), line-height(52, 44));
+            color: $primary;
+            text-align: center;
+            margin-bottom: length(16);
+
+            @include breakpoint(tablet991) {
+                @include font-face($natoSans, style('normal'), size(36), weight('medium'), line-height(44, 36));
+            }
+            
+            @include breakpoint(phone575) {
+                @include font-face($natoSans, style('normal'), size(24), weight('medium'), line-height(30, 24));
+            }
+        }
+
+        .herobuttons {
+            @include flex-center;
+            gap: length(24);
+
+            @include breakpoint(phone480) {
+                gap: length(10);
+            }
+        }
+
+        .herotext {
+            @include font-face($natoSans, style('normal'), size(14), weight('normal'), line-height(14, 14));
+            color: $placeholderText;
+
+            @include breakpoint(phone480) {
+                line-height: 1.5;
+            }
+        }
+    }
+}

@@ -25,3 +25,207 @@
         }
     }
 }
+
+.homeheader {
+    display: flex;
+    padding: length(8) length(20);
+    background: $white;
+    height: length(64);
+    @include border-single(bottom, solid, 1, $headerBorder);
+
+    .logo {
+        width: length(167);
+        height: length(48);
+        @include flex-center;
+        overflow: hidden;
+        @include transitions;
+
+        @include breakpoint(phone500) {
+            width: length(130);
+        }
+
+        img {
+            max-width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .search {
+        @include flex-center-vert;
+        gap: length(60);
+        margin: 0 auto;
+
+        @include breakpoint(tablet991) {
+            justify-content: flex-end;
+            margin-right: 0;
+        }
+
+        @include breakpoint(desktop1200) {
+            gap: length(32);
+        }
+
+        .searchbox {
+            @include flex-center-vert;
+            max-width: length(774);
+            width: length(774);
+            height: length(48);
+            background: $heroBg;
+            @include border(solid, 1, transparent);
+            padding: length(0) length(5);
+
+            @include breakpoint(desktop1366) {
+                width: length(600);
+            }
+
+            @include breakpoint(desktop1200) {
+                width: length(460);
+            }
+
+            @include breakpoint(tablet991) {
+                display: none;
+            }
+
+            &:focus-within {
+                background: $white;
+                box-shadow: $searchshadow;
+                border-color: rgba($white, 1);
+            }
+
+            .btn-search {
+                background: transparent;
+                @include square(length(40));
+                @include circle;
+                padding: length(8);
+                @include flex-center;
+                overflow: hidden;
+
+                @include hover {
+                    background: $searchHover;
+                }
+            }
+
+            .searchfield {
+                padding: length(0) length(16);
+                width: calc(100% - 5rem);
+                @include h100;
+                @include font-face($natoSans, style('normal'), size(13), weight('medium'), line-height(27, 13));
+                @include setBgColor(transparent, $black);
+
+                &::placeholder {
+                    color: $placeholderText;
+                }
+            }
+
+            .btn-clear {
+                background: transparent;
+                @include square(length(40));
+                @include circle;
+                padding: length(8);
+                overflow: hidden;
+                display: none;
+
+                &.show {
+                    @include flex-center;
+                }
+
+                @include hover {
+                    background: $searchHover;
+                }
+            }
+        }
+
+        .iconlist {
+            @include list-horizontal;
+            overflow: hidden;
+
+            &-link {
+                @include square(length(48));
+                @include flex-center;
+                @include circle;
+                overflow: hidden;
+                background: transparent;
+
+                @include breakpoint(phone480) {
+                    @include square(length(32));
+                }
+
+                svg {
+                    @include square(length(24));
+
+                    @include breakpoint(phone480) {
+                        @include square(length(16));
+                    }
+
+                    path {
+                        fill: $placeholderText;
+                    }
+                }
+
+                @include hover {
+                    background: $btnHover;
+                }
+
+                &:focus {
+                    background: $buttonFocus;
+                }
+
+                &:active {
+                    background: $buttonFocus;
+                }
+            }
+        }
+    }
+
+    .iconmenus {
+        @include flex-end;
+
+        .iconlist {
+            @include list-horizontal;
+            overflow: hidden;
+
+            &-link {
+                @include square(length(48));
+                @include flex-center;
+                @include circle;
+                overflow: hidden;
+                background: transparent;
+
+                @include breakpoint(phone480) {
+                    @include square(length(32));
+                }
+
+                @include hover {
+                    background: $btnHover;
+                }
+
+                svg {
+                    @include square(length(24));
+
+                    @include breakpoint(phone480) {
+                        @include square(length(18));
+                    }
+                    
+                    path {
+                        fill: $placeholderText;
+                    }
+                }
+
+                .thumb {
+                    @include square(length(32));
+                    @include flex-center;
+                    @include circle;
+                    overflow: hidden;
+
+                    @include breakpoint(phone480) {
+                        @include square(length(20));
+                    }
+
+                    img {
+                        @include wh100;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}

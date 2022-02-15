@@ -14,3 +14,65 @@
         @include setBgColor($blue-hover, $white);
     }
 }
+
+.btn-start {
+    @include flex-center;
+    gap: length(12);
+    @include radius(40);
+    text-align: center;
+    @include setBgColor($blue, $white);
+    padding: length(16) length(24);
+
+    @include breakpoint(phone500) {
+        padding: length(14) length(18);
+    }
+
+    @include hover {
+        @include setBgColor($blue-hover, $white);
+    }
+
+    .text {
+        @include font-face($natoSans, style('normal'), size(14), weight('semibold'), line-height(14, 14));
+        letter-spacing: length(0.28);
+
+        @include breakpoint(phone480) {
+            @include font-face($natoSans, style('normal'), size(12), weight('semibold'), line-height(12, 12));
+        }
+    }
+}
+
+.btn-create {
+    @include flex-center;
+    gap: length(12);
+    @include radius(40);
+    text-align: center;
+    @include setBgColor($white, $blue);
+    padding: length(16) length(24);
+    box-shadow: $boxshadow-1;
+
+    @include breakpoint(phone500) {
+        padding: length(14) length(18);
+    }
+
+    @include hover {
+        @include setBgColor($white, $blue-hover);
+        box-shadow: $btnshadow;
+
+        .icon {
+            svg {
+                path {
+                    fill: $blue-hover;
+                }
+            }
+        }
+    }
+
+    .text {
+        @include font-face($natoSans, style('normal'), size(14), weight('semibold'), line-height(14, 14));
+        letter-spacing: length(0.28);
+
+        @include breakpoint(phone480) {
+            @include font-face($natoSans, style('normal'), size(12), weight('semibold'), line-height(12, 12));
+        }
+    }
+}

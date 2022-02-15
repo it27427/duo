@@ -1,0 +1,104 @@
+.modal {
+    &-body {
+        position: relative;
+        padding: length(20) length(24) length(40);
+
+        .btn-close {
+            @include square(length(48));
+            @include flex-center;
+            @include circle;
+            overflow: hidden;
+            background: transparent;
+            position: absolute;
+            top: length(20);
+            right: length(20);
+            z-index: 100;
+            opacity: 1;
+
+            @include breakpoint(phone480) {
+                @include square(length(32));
+            }
+
+            svg {
+                @include square(length(24));
+
+                @include breakpoint(phone480) {
+                    @include square(length(16));
+                }
+
+                path {
+                    fill: $placeholderText;
+                }
+            }
+
+            @include hover {
+                background: $btnHover;
+            }
+
+            &:focus {
+                background: $buttonFocus;
+                outline: none;
+                box-shadow: none;
+            }
+
+            &:active {
+                background: $buttonFocus;
+            }
+        }
+
+        .modaldetails {
+            @include flex-center-column;
+            gap: length(24);
+
+            .videoicon {
+                @include square(length(232));
+                @include flex-center;
+                overflow: hidden;
+            }
+
+            .modaltitle {
+                @include font-face($natoSans, style('normal'), size(44), weight('medium'), line-height(52, 44));
+                color: $primary;
+                text-align: center;
+
+                @include breakpoint(tablet991) {
+                    @include font-face($natoSans, style('normal'), size(36), weight('medium'), line-height(44, 36));
+                }
+
+                @include breakpoint(phone575) {
+                    @include font-face($natoSans, style('normal'), size(24), weight('medium'), line-height(30, 24));
+                }
+            }
+
+            .inputinfo {
+                background: $heroBg;
+                @include flex-center-vert;
+                gap: length(16);
+                @include w100;
+                @include radius(8);
+                padding: length(0) length(16);
+                height: length(48);
+                margin-bottom: length(24);
+
+                .inputicon {
+                    @include square(length(24));
+                    @include flex-center;
+                    overflow: hidden;
+
+                    svg {
+                        path {
+                            fill: $placeholderText;
+                        }
+                    }
+                }
+
+                .inputfield {
+                    width: calc(100% - 1.5rem);
+                    @include h100;
+                    @include font-face($natoSans, style('normal'), size(13), weight('medium'), line-height(27, 13));
+                    @include setBgColor(transparent, $black);
+                }
+            }
+        }
+    }
+}
