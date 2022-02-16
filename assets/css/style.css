@@ -1772,7 +1772,7 @@ select {
 }
 
 .authentication .authenticationbox {
-  max-width: 28.125rem;
+  max-width: 28.75rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1836,8 +1836,10 @@ select {
   background: white;
   width: 100%;
   border: solid 0.0625rem #dadce0;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
   padding: 3rem 2.5rem 2.25rem;
-  min-height: 25rem;
+  min-height: 22.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2008,6 +2010,32 @@ select {
   color: #2D3748;
 }
 
+.authentication-form .infowrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+}
+
+.authentication-form .infowrapper .link {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.42857;
+  color: #1a73e8;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.authentication-form .infowrapper .link:not([disabled]):hover {
+  color: #174ea6;
+}
+
 .authentication-form .wrapper .input-wrapper {
   position: relative;
   width: 100%;
@@ -2022,7 +2050,7 @@ select {
   width: 100%;
   background: white;
   color: #202124;
-  border: solid 0.0625rem border-1;
+  border: solid 0.0625rem #dadce0;
   border-radius: 0.25rem;
   border-radius: 0.25rem;
   font-family: "Noto Sans";
@@ -2078,15 +2106,15 @@ select {
 .authentication-form .wrapper .input-wrapper .input-field:focus ~ .input-label,
 .authentication-form .wrapper .input-wrapper .input-field:not(:placeholder-shown).input-field:not(:focus) ~ .input-label {
   top: 0;
+  color: #1a73e8;
+  padding: 0 .375rem;
   font-family: "Noto Sans";
   font-style: normal;
   font-size: 0.75rem;
-  font-weight: normal;
+  font-weight: 300;
   line-height: 1.66667;
-  color: #1a73e8;
-  padding: 0 .375rem;
-  font-weight: 600;
   letter-spacing: .03125rem;
+  color: #5f6368;
 }
 
 .authentication-form .wrapper .input-wrapper .input-field:focus ~ .input-label {
@@ -2249,6 +2277,34 @@ select {
   color: #202124;
 }
 
+.authentication-form .infos {
+  padding: 2.5rem 0rem 1.25rem;
+}
+
+.authentication-form .infos .infotext {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.66667;
+  color: #5f6368;
+}
+
+.authentication-form .infos .link {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.42857;
+  color: #1a73e8;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.authentication-form .infos .link:not([disabled]):hover {
+  color: #174ea6;
+}
+
 .authentication-form .submitbox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2256,10 +2312,35 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
   padding-top: 1.625rem;
+}
+
+.authentication-form .submitbox .link {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.42857;
+  background: transparent;
+  color: #1a73e8;
+  letter-spacing: 0.01069rem;
+  padding: 0.375rem 0.5rem;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.authentication-form .submitbox .link:not([disabled]):hover {
+  background: #F6FAFE;
+  color: #174ea6;
+}
+
+.authentication-form .submitbox .link:active {
+  background: #F6FAFE;
+  color: #174ea6;
 }
 
 .authentication-form .submitbox .send-btn {
@@ -2279,6 +2360,8 @@ select {
   text-align: center;
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
+  margin-left: auto;
+  cursor: pointer;
 }
 
 .authentication-form .submitbox .send-btn:hover {
